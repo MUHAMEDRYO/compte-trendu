@@ -1,4 +1,3 @@
-
 #include<stdio.h>
 int main (){
     int t[50];
@@ -7,7 +6,7 @@ int main (){
     do{
         printf("Donner le nombre des dimensions du tableau:");
         scanf("%d",&n);
-    }while(n>50);
+    }while(n > 50);
     for (i = 0 ; i<n ; i++){
         printf("Donner le %d element du tableau:",i);
         scanf("%d",&t[i]);
@@ -32,7 +31,7 @@ int main (){
 
         printf("Le tableau est :\n");
         for (i = 0 ; i<n ; i++){
-                printf(" %d \n",t[i]);
+                printf(" %d\n", t[i]);
         }
         break;
 
@@ -44,37 +43,47 @@ int main (){
             }
         }
         printf("L element minimum du tableau est %d\n",t[min]);
-        break;s
+        break;
 
     case 3:
         max = 0;
         for (i = 1 ; i<n ; i++){
-            if (t[i]>t[max]){
+            if (t[i] > t[max]){
                 max = i;
             }
         }
-        printf("L element minimum du tableau est %d \n",t[max]);
+        printf("L element maximum du tableau est %d \n",t[max]);
         break;
 
     case 4:
         int x;//x est l element a rechercher
-        printf ("Donner l element a rechercher:");
-        scanf("%d \n",&x);
         int a = -1;
+        printf ("Donner l element a rechercher:");
+        scanf("%d",&x);
         i = 0;
-        while (i < n){
-            if(x == t[i]){
+        for (i = 0; i < n; i++) {
+            if (t[i] == x) {
                 a = i;
-            }
-            else{
-                i++;
+                break;
             }
         }
         if (a != -1){
             printf("L element a recherche %d existe dand le tableau dont la position est %d",x,i);
 
         }
+        else {
+                    printf("L'element %d n'existe pas dans le tableau.\n", x);
+                }
+                break;
+            }
 
+
+     case 5:
+         int del;
+         do{
+            printf("Donner l element a supprimer:");
+            scanf("%d",&del);
+         }while(del < n);
 
 
 
@@ -95,4 +104,3 @@ int main (){
 }
 return 0;
 }
-
