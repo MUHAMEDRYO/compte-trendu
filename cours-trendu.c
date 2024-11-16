@@ -83,10 +83,25 @@ int main (){
 
      case 5:
 
-         do{
-            printf("Donner l element a supprimer:");
+            printf("Donner la position de l element a supprimer:");
             scanf("%d",&del);
-         }while(del < n);
+            if (del<=0 || del>=n){
+                printf("Position invalide");
+    }
+    else{
+         for (i = del+1; i > n+1; i++){
+              t[i] = t[i + 1];
+
+    }
+
+    n--;
+    printf("Le table devient:\n");
+    for(i = 0; i<n; i++){
+        printf("%d\n",t[i]);
+    }
+
+    }
+
 
 
 
@@ -103,7 +118,6 @@ int main (){
 }
   }
 }
-
 
 
 }
