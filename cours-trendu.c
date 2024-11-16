@@ -2,6 +2,9 @@
 int main (){
     int t[50];
     int max,min,i,n,choix;
+    int a = -1;
+    int x;//x est l element a rechercher
+    int del;
     printf("                                                      Compte trendu\n");
     do{
         printf("Donner le nombre des dimensions du tableau:");
@@ -56,8 +59,8 @@ int main (){
         break;
 
     case 4:
-        int x;//x est l element a rechercher
-        int a = -1;
+
+
         printf ("Donner l element a rechercher:");
         scanf("%d",&x);
         i = 0;
@@ -75,11 +78,11 @@ int main (){
                     printf("L'element %d n'existe pas dans le tableau.\n", x);
                 }
                 break;
-            }
+
 
 
      case 5:
-         int del;
+
          do{
             printf("Donner l element a supprimer:");
             scanf("%d",&del);
@@ -95,9 +98,11 @@ int main (){
 
 
 
-    }
 
 
+}
+  }
+}
 
 
 
